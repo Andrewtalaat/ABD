@@ -11,7 +11,7 @@ void OR2::Operate()
 		m_OutputPin.setStatus(HIGH);
 	}
 	else m_OutputPin.setStatus(LOW);
-	//kosombelal
+	
 }
 
 
