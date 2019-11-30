@@ -118,6 +118,20 @@ public:
 	// Draws 2-input OR gate
 	void DrawOR2(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
 
+	// Draws 2-input NOR gate
+	void DrawNOR(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws 2-input NAND gate
+	void DrawNAND(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws 1-input NOT gate
+	void DrawNOT(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws 2-input XNOR gate
+	void DrawXNOR(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws 2-input XOR gate
+	void DrawXOR(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
 
 	///TODO: Make similar functions for drawing all other gates, switch, and LED, .. etc
 
