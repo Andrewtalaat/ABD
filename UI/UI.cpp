@@ -247,6 +247,70 @@ void UI::DrawOR2(const GraphicsInfo& r_GfxInfo, bool selected) const
 	pWind->DrawImage(GateImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, GATE_Width, GATE_Height);
 }
 
+void UI::DrawNOR(const GraphicsInfo& r_GfxInfo, bool selected) const
+{
+	string GateImage;
+	if (selected)	//use image in the highlighted case
+		GateImage = "Images\\Gates\\GATE_NOR_Hi.jpg";
+	else
+		GateImage = "Images\\Gates\\GATE_NOR.jpg";
+
+	//Draw NOR Gate at Gfx_Info (1st corner)
+	//Set the Image Width & Height by NOR Image Parameter in UI_Info
+	pWind->DrawImage(GateImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, GATE_Width, GATE_Height);
+}
+
+void UI::DrawNAND(const GraphicsInfo& r_GfxInfo, bool selected) const
+{
+	string GateImage;
+	if (selected)	//use image in the highlighted case
+		GateImage = "Images\\Gates\\GATE_NAND_Hi.jpg";
+	else
+		GateImage = "Images\\Gates\\GATE_NAND.jpg";
+
+	//Draw NAND Gate at Gfx_Info (1st corner)
+	//Set the Image Width & Height by NAND Image Parameter in UI_Info
+	pWind->DrawImage(GateImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, GATE_Width, GATE_Height);
+}
+
+void UI::DrawNOT(const GraphicsInfo& r_GfxInfo, bool selected) const
+{
+	string GateImage;
+	if (selected)	//use image in the highlighted case
+		GateImage = "Images\\Gates\\GATE_NOT_Hi.jpg";
+	else
+		GateImage = "Images\\Gates\\GATE_NOT.jpg";
+
+	//Draw NOT Gate at Gfx_Info (1st corner)
+	//Set the Image Width & Height by NOT Image Parameter in UI_Info
+	pWind->DrawImage(GateImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, GATE_Width, GATE_Height);
+}
+
+void UI::DrawXNOR(const GraphicsInfo& r_GfxInfo, bool selected) const
+{
+	string GateImage;
+	if (selected)	//use image in the highlighted case
+		GateImage = "Images\\Gates\\GATE_XNOR_Hi.jpg";
+	else
+		GateImage = "Images\\Gates\\GATE_XNOR.jpg";
+
+	//Draw XNOR Gate at Gfx_Info (1st corner)
+	//Set the Image Width & Height by XNOR Image Parameter in UI_Info
+	pWind->DrawImage(GateImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, GATE_Width, GATE_Height);
+}
+
+void UI::DrawXOR(const GraphicsInfo& r_GfxInfo, bool selected) const
+{
+	string GateImage;
+	if (selected)	//use image in the highlighted case
+		GateImage = "Images\\Gates\\GATE_XOR_Hi.jpg";
+	else
+		GateImage = "Images\\Gates\\GATE_XOR.jpg";
+
+	//Draw XOR Gate at Gfx_Info (1st corner)
+	//Set the Image Width & Height by XOR Image Parameter in UI_Info
+	pWind->DrawImage(GateImage, r_GfxInfo.PointsList[0].x, r_GfxInfo.PointsList[0].y, GATE_Width, GATE_Height);
+}
 //TODO: Add similar functions to draw all components
 
 
