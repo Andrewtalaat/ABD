@@ -15,7 +15,7 @@ UI::UI()
 	pWind = new window(width, height, wx, wy);	
 
 
-	ChangeTitle("ABDs' Logic Simulator Prototype");
+	ChangeTitle("Logic Simulator Project");
 
 	CreateDesignToolBar();	//Create the desgin toolbar
 	CreateStatusBar();		//Create Status bar
@@ -187,14 +187,14 @@ void UI::CreateDesignToolBar()
 
 	//First prepare List of images for each menu item
 	string MenuItemImages[ITM_DSN_CNT];
-	MenuItemImages[ITM_AND2] = "images\\Menu\\MENU_AND2.png";
-	MenuItemImages[ITM_OR2]  = "images\\Menu\\MENU_OR2.png";
-	MenuItemImages[ITM_NOT] = "images\\Menu\\MENU_NOT.png";
-	MenuItemImages[ITM_NOR] = "images\\Menu\\MENU_NOR.png";
-	MenuItemImages[ITM_XOR] = "images\\Menu\\MENU_XOR.png";
-	MenuItemImages[ITM_NAND] = "images\\Menu\\MENU_NAND.png";
-	MenuItemImages[ITM_XNOR] = "images\\Menu\\MENU_XNOR.png";
-	MenuItemImages[ITM_EXIT] = "images\\Menu\\MENU_EXIT.png";
+	MenuItemImages[ITM_AND2] = "images\\Menu\\MENU_AND2.jpg";
+	MenuItemImages[ITM_OR2]  = "images\\Menu\\MENU_OR2.jpg";
+	MenuItemImages[ITM_NOT] = "images\\Menu\\MENU_NOT.jpg";
+	MenuItemImages[ITM_NOR] = "images\\Menu\\MENU_NOR.jpg";
+	MenuItemImages[ITM_XOR] = "images\\Menu\\MENU_XOR.jpg";
+	MenuItemImages[ITM_NAND] = "images\\Menu\\MENU_NAND.jpg";
+	MenuItemImages[ITM_XNOR] = "images\\Menu\\MENU_XNOR.jpg";
+	MenuItemImages[ITM_EXIT] = "images\\Menu\\MENU_EXIT.jpg";
 
 
 	//Draw menu item one image at a time
@@ -226,9 +226,9 @@ void UI::DrawAND2(const GraphicsInfo &r_GfxInfo, bool selected) const
 {
 	string GateImage;
 	if(selected)	//use image in the highlighted case
-		GateImage="Images\\Gates\\GATE_AND2_HI.png";
+		GateImage="Images\\Gates\\GATE_AND2_HI.jpg";
 	else  
-		GateImage = "Images\\Gates\\GATE_AND2.png";
+		GateImage = "Images\\Gates\\GATE_AND2.jpg";
 
 	//Draw AND2 Gate at Gfx_Info (1st corner)
 	//Set the Image Width & Height by AND2 Image Parameter in UI_Info
@@ -238,9 +238,9 @@ void UI::DrawOR2(const GraphicsInfo& r_GfxInfo, bool selected) const
 {
 	string GateImage;
 	if (selected)	//use image in the highlighted case
-		GateImage = "Images\\Gates\\GATE_OR2_HI.png";
+		GateImage = "Images\\Gates\\GATE_OR2_HI.jpg";
 	else
-		GateImage = "Images\\Gates\\GATE_OR2.png";
+		GateImage = "Images\\Gates\\GATE_OR2.jpg";
 
 	//Draw OR2 Gate at Gfx_Info (1st corner)
 	//Set the Image Width & Height by OR2 Image Parameter in UI_Info
