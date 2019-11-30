@@ -9,7 +9,7 @@ enum ActionType
 	ADD_Buff,			//Add 1-input Buffer gate
 	ADD_INV,			//Add 1-input Inverter gate
 	ADD_AND_GATE_2,		//Add 2-input AND gate
-	ADD_OR_GATE_2,		//Add 2-input OR gate
+	ADD_OR2_GATE_2,		//Add 2-input OR gate
 	ADD_NAND_GATE_2,	//Add 2-input NAND gate
 	ADD_NOR_GATE_2,		//Add 2-input NOR gate
 	ADD_XOR_GATE_2,		//Add 2-input XOR gate

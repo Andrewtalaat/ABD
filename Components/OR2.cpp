@@ -26,7 +26,7 @@ void OR2::Draw(UI* pUI)
 //returns status of outputpin
 int OR2::GetOutPinStatus()
 {
-	return m_OutputPin.getStatus();
+	return OR2::m_OutputPin.getStatus();
 }
 
 

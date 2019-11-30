@@ -19,8 +19,6 @@ private:
 	UI* pUI; //pointer to the UI
 
 
-public:
-
 
 public:	
 	ApplicationManager(); //constructor

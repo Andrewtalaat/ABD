@@ -15,7 +15,7 @@ UI::UI()
 	pWind = new window(width, height, wx, wy);	
 
 
-	ChangeTitle("Logic Simulator Project");
+	ChangeTitle("ABDs' Logic Simulator Prototype");
 
 	CreateDesignToolBar();	//Create the desgin toolbar
 	CreateStatusBar();		//Create Status bar
@@ -98,7 +98,12 @@ ActionType UI::GetUserAction() const
 			switch (ClickedItemOrder)
 			{
 			case ITM_AND2: return ADD_AND_GATE_2;
-			case ITM_OR2: return ADD_OR_GATE_2;
+			case ITM_OR2: return ADD_OR2_GATE_2;
+			case ITM_NOT: return ADD_INV;
+			case ITM_NOR: return ADD_NOR_GATE_2;
+			case ITM_XOR: return ADD_XOR_GATE_2;
+			case ITM_XNOR: return ADD_XNOR_GATE_2;
+			case ITM_NAND: return ADD_NAND_GATE_2;
 			case ITM_EXIT: return EXIT;	
 			
 			default: return DSN_TOOL;	//A click on empty place in desgin toolbar
@@ -135,7 +140,7 @@ void UI::ChangeTitle(string Title) const
 //////////////////////////////////////////////////////////////////////////////////
 void UI::CreateStatusBar() const
 {
-	pWind->SetPen(RED,3);
+	pWind->SetPen(BROWN,3);
 	pWind->DrawLine(0, height-StatusBarHeight, width, height-StatusBarHeight);
 }
 //////////////////////////////////////////////////////////////////////////////////
@@ -182,11 +187,15 @@ void UI::CreateDesignToolBar()
 
 	//First prepare List of images for each menu item
 	string MenuItemImages[ITM_DSN_CNT];
-	MenuItemImages[ITM_AND2] = "images\\Menu\\Menu_AND2.jpg";
-	MenuItemImages[ITM_OR2]  = "images\\Menu\\Menu_OR2.jpg";
-	MenuItemImages[ITM_EXIT] = "images\\Menu\\Menu_Exit.jpg";
+	MenuItemImages[ITM_AND2] = "images\\Menu\\MENU_AND2.png";
+	MenuItemImages[ITM_OR2]  = "images\\Menu\\MENU_OR2.png";
+	MenuItemImages[ITM_NOT] = "images\\Menu\\MENU_NOT.png";
+	MenuItemImages[ITM_NOR] = "images\\Menu\\MENU_NOR.png";
+	MenuItemImages[ITM_XOR] = "images\\Menu\\MENU_XOR.png";
+	MenuItemImages[ITM_NAND] = "images\\Menu\\MENU_NAND.png";
+	MenuItemImages[ITM_XNOR] = "images\\Menu\\MENU_XNOR.png";
+	MenuItemImages[ITM_EXIT] = "images\\Menu\\MENU_EXIT.png";
 
-	//TODO: Prepare image for each menu item and add it to the list
 
 	//Draw menu item one image at a time
 	for(int i=0; i<ITM_DSN_CNT; i++)
@@ -217,9 +226,9 @@ void UI::DrawAND2(const GraphicsInfo &r_GfxInfo, bool selected) const
 {
 	string GateImage;
 	if(selected)	//use image in the highlighted case
-		GateImage="Images\\Gates\\Gate_AND2_Hi.jpg";
+		GateImage="Images\\Gates\\GATE_AND2_HI.png";
 	else  
-		GateImage = "Images\\Gates\\Gate_AND2.jpg";
+		GateImage = "Images\\Gates\\GATE_AND2.png";
 
 	//Draw AND2 Gate at Gfx_Info (1st corner)
 	//Set the Image Width & Height by AND2 Image Parameter in UI_Info
@@ -229,9 +238,9 @@ void UI::DrawOR2(const GraphicsInfo& r_GfxInfo, bool selected) const
 {
 	string GateImage;
 	if (selected)	//use image in the highlighted case
-		GateImage = "Images\\Gates\\Gate_OR2_Hi.jpg";
+		GateImage = "Images\\Gates\\GATE_OR2_HI.png";
 	else
-		GateImage = "Images\\Gates\\Gate_OR2.jpg";
+		GateImage = "Images\\Gates\\GATE_OR2.png";
 
 	//Draw OR2 Gate at Gfx_Info (1st corner)
 	//Set the Image Width & Height by OR2 Image Parameter in UI_Info

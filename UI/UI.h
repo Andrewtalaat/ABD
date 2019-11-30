@@ -39,13 +39,16 @@ class UI
 		//Note: Items are ordered here as they appear in menu
 		//If you want to change the menu items order, change the order here
 		ITM_AND2,		//AND gate item in menu
-		ITM_OR2,		//OR gate item in menu
+		ITM_OR2,		//OR2 gate item in menu
+		ITM_NOT,		//NOT gate item in menu
+		ITM_NOR,		//NOR gate item in menu
+		ITM_XOR,		//XOR gate item in menu
+		ITM_XNOR,		//XNOR gate item in menu
+		ITM_NAND,		//NAnd gate item in menu
 	
 		ITM_EXIT,		//Exit item
-		//TODO: Add more items names here
 	
 		ITM_DSN_CNT		//no. of design menu items ==> This should be the last line in this enum
-	
 	};
 
 
@@ -114,6 +117,7 @@ public:
 
 	// Draws 2-input OR gate
 	void DrawOR2(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
 
 	///TODO: Make similar functions for drawing all other gates, switch, and LED, .. etc
 
