@@ -59,7 +59,7 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			pAct = new AddNANDgate2(this);
 			break;
 		case ADD_CONNECTION:
-			//TODO: Create AddConection Action here
+			//TODO: Create AddConection Action 
 			break;
 	
 
