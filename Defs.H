@@ -27,6 +27,13 @@ enum ActionType
 	DEL,		//Delete a Component, a Connection
 	MOVE,		//Move a Component, a Connection
 
+    COPY,		//copy a Component, a Connection
+	CUT,		//CUT a Component, a Connection
+	PASTE,		//PASTE a Component, a Connection
+	
+	SIM,        //simulation action
+	TRUTH,      // truth table of the whole circuit
+
 	SAVE,		//Save the whole Circuit to a file
 	LOAD,		//Load a Circuit from a file
 
@@ -35,6 +42,8 @@ enum ActionType
 
 	DSN_MODE,	//Switch to Design mode
 	SIM_MODE,	//Switch to Simulatiom mode
+
+
 
 	EXIT,		//Exit the application
 
@@ -63,7 +72,13 @@ enum  MODE	//Modes of operation
 //assume fan out is 5 for now it can be read from the user or can be predefined as const
 enum FANOUT
 {
-	AND2_FANOUT = 5	//Default fan out of 2-input AND gate
+	AND2_FANOUT = 5,	//Default fan out of 2-input AND gate
+	OR2_FANOUT = 5,	//Default fan out of 2-input OR gate
+	NOT_FANOUT = 5,	//Default fan out of INVERTER gate
+	NOR_FANOUT = 5,	//Default fan out of 2-input NOR gate
+	XNOR_FANOUT = 5,	//Default fan out of 2-input XNOR gate
+	NAND_FANOUT = 5,	//Default fan out of 2-input NAND gate
+	XOR_FANOUT = 5,	//Default fan out of 2-input XOR gate
 };
 
 
