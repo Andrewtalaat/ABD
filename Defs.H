@@ -79,6 +79,8 @@ enum FANOUT
 	XNOR_FANOUT = 5,	//Default fan out of 2-input XNOR gate
 	NAND_FANOUT = 5,	//Default fan out of 2-input NAND gate
 	XOR_FANOUT = 5,	//Default fan out of 2-input XOR gate
+	SWITCH_FANOUT = 5,	//Default fan out of SWITCH
+	LED_FANOUT = 5,	//Default fan out of LED
 };
 
 

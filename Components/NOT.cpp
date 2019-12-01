@@ -32,11 +32,11 @@ int NOT::GetOutPinStatus()
 //returns status of Inputpin #n
 int NOT::GetInputPinStatus(int n)
 {
-	return m_InputPins[n-1].getStatus();	//n starts from 1 but array index starts from 0.
+	return m_InputPins[0].getStatus();	//n starts from 1 but array index starts from 0.
 }
 
 //Set status of an input pin ot HIGH or LOW
 void NOT::setInputPinStatus(int n, STATUS s)
 {
-	m_InputPins[n-1].setStatus(s);
+	m_InputPins[0].setStatus(s);
 }

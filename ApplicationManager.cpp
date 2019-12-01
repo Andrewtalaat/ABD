@@ -6,6 +6,10 @@
 #include "Actions\AddNANDgate2.h"
 #include "Actions\AddXORgate2.h"
 #include "Actions\AddXNORgate2.h"
+#include "Actions\AddSWITCH.h"
+#include "Actions\AddLED.h"
+
+
 
 
 ApplicationManager::ApplicationManager()
@@ -57,6 +61,12 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			break;
 		case ADD_NAND_GATE_2:
 			pAct = new AddNANDgate2(this);
+			break;
+		case ADD_LED:
+			pAct = new AddLED(this);
+			break;
+		case ADD_Switch:
+			pAct = new AddSWITCH(this);
 			break;
 		case ADD_CONNECTION:
 			//TODO: Create AddConection Action 
