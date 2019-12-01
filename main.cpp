@@ -24,7 +24,7 @@ int main()
 		AppManager.UpdateInterface();
 	
 
-	}while(ActType != EXIT);
+	}while(ActType != EXIT_THIS);
 		
 	return 0;
 }

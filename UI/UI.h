@@ -39,13 +39,29 @@ class UI
 		//Note: Items are ordered here as they appear in menu
 		//If you want to change the menu items order, change the order here
 		ITM_AND2,		//AND gate item in menu
-		ITM_OR2,		//OR gate item in menu
+		ITM_OR2,		//OR2 gate item in menu
+		ITM_NOT,		//NOT gate item in menu
+		ITM_NOR,		//NOR gate item in menu
+		ITM_XOR,		//XOR gate item in menu
+		ITM_XNOR,		//XNOR gate item in menu
+		ITM_NAND,		//NAND gate item in menu
+		ITM_SWITCH,		//SWITCH item in menu
+		ITM_LED,		//LED item in menu
+		ITM_CONNECT,    //Connect item in menu
+		ITM_EDIT,		//EDIT item in menu
+		ITM_LABEL,		//Label item in menu
+		ITM_MOVE,		//Move item in menu
+		ITM_DELETE,		//Delete item in menu
+		ITM_COPY,		//copy item in menu
+		ITM_CUT,		//cut item in menu
+		ITM_PASTE,		//Paste item in menu
+		ITM_SAVE,		//Save item in menu
+		ITM_LOAD,		//Load item in menu
+		ITM_SWITCH_BAR,		//switch mode  item in menu
 	
 		ITM_EXIT,		//Exit item
-		//TODO: Add more items names here
 	
 		ITM_DSN_CNT		//no. of design menu items ==> This should be the last line in this enum
-	
 	};
 
 
@@ -54,8 +70,8 @@ class UI
 		//Note: Items are ordered here as they appear in menu
 		ITM_SIM,	//Simulate menu item
 		ITM_TRUTH,	//Truth table menu item
-	
-		//TODO:Add more items names here
+		ITM_SWITCH_BAR2,		//switch mode  item in menu
+		ITM_EXIT2,		//Exit item
 	
 		ITM_SIM_CNT		//no. of simulation menu items ==> This should be the last line in this enum
 	
@@ -65,11 +81,11 @@ class UI
 
 	MODE AppMode;		//Application Mode (design or simulation)
 	
-	static const int	width = 1200, height = 650,	//Window width and height
+	static const int	width = 1600, height = 650,	//Window width and height
 						wx = 15 , wy = 15,			//Window starting coordinates
 						StatusBarHeight = 50,	//Status Bar Height
 						ToolBarHeight = 80,		//Tool Bar Height (distance from top of window to bottom line of toolbar)
-						ToolItemWidth = 80;		//Width of each item in toolbar menu
+						ToolItemWidth = 60;		//Width of each item in toolbar menu
 
 	color DrawColor;		//Drawing color
 	color SelectColor;		//Highlighting color
@@ -112,6 +128,29 @@ public:
 	// Draws 2-input AND gate
 	void DrawAND2(const GraphicsInfo &r_GfxInfo, bool selected = false) const;
 
+	// Draws 2-input OR gate
+	void DrawOR2(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws 2-input NOR gate
+	void DrawNOR(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws 2-input NAND gate
+	void DrawNAND(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws 1-input NOT gate
+	void DrawNOT(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws 2-input XNOR gate
+	void DrawXNOR(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws 2-input XOR gate
+	void DrawXOR(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws LED item
+	void DrawLED(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
+
+	// Draws SWITCH item
+	void DrawSWITCH(const GraphicsInfo& r_GfxInfo, bool selected = false) const;
 	///TODO: Make similar functions for drawing all other gates, switch, and LED, .. etc
 
 	// Draws Connection

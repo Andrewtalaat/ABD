@@ -34,7 +34,7 @@ image::image(const char *cpFileName, imagetype itThisType) {
 
 	bmiImage = NULL;
     ucpImageData = NULL;
-    
+    //test
     if(cpFileName == NULL) {
       throw FILE_NOT_FOUND;
     }
