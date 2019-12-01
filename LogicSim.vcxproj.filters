@@ -160,6 +160,9 @@
     <ClInclude Include="Actions\AddLED.h">
       <Filter>Actions</Filter>
     </ClInclude>
+    <ClInclude Include="Actions\EXIT.h">
+      <Filter>Actions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Components\AND2.cpp">
@@ -345,6 +348,9 @@
       <Filter>Actions</Filter>
     </ClCompile>
     <ClCompile Include="Actions\AddLED.cpp">
+      <Filter>Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\EXIT.cpp">
       <Filter>Actions</Filter>
     </ClCompile>
   </ItemGroup>

@@ -117,7 +117,7 @@ ActionType UI::GetUserAction() const
 			case ITM_SAVE: return SAVE;
 			case ITM_LOAD: return LOAD;
 			case ITM_SWITCH_BAR: return SIM_MODE;
-			case ITM_EXIT: return EXIT;
+			case ITM_EXIT: return EXIT_THIS;
 
 			default: return DSN_TOOL;	//A click on empty place in desgin toolbar
 			}
@@ -148,7 +148,7 @@ ActionType UI::GetUserAction() const
 			case ITM_TRUTH: return TRUTH;
 			case ITM_SWITCH_BAR2: return DSN_MODE;
 
-			case ITM_EXIT2: return EXIT;
+			case ITM_EXIT2: return EXIT_THIS;
 
 			default: return DSN_TOOL;	//A click on empty place in desgin toolbar
 			}

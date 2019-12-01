@@ -8,7 +8,7 @@
 #include "Actions\AddXNORgate2.h"
 #include "Actions\AddSWITCH.h"
 #include "Actions\AddLED.h"
-
+#include "Actions\EXIT.h"
 
 
 
@@ -68,13 +68,8 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		case ADD_Switch:
 			pAct = new AddSWITCH(this);
 			break;
-		case ADD_CONNECTION:
-			//TODO: Create AddConection Action 
-			break;
-	
-
-		case EXIT:
-			///TODO: create ExitAction here
+		case EXIT_THIS:
+			pAct = new EXIT(this);
 			break;
 	}
 	if(pAct)
